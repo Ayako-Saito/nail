@@ -1,0 +1,43 @@
+.top-hero-wrapper{
+  width: 100vw;  /* 横幅 */
+  height: 100vh; /* 高さ */
+  background: image-url('top-1.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-hero-container{
+  padding-top: 200px;
+}
+
+h1{
+  font-weight: 100;  /* フォントの太さ */
+  font-size: 80px;
+  font-family: cursive;
+  margin-bottom: 50px;
+}
+
+.text-white{
+  color: #bcddff;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
+} /*右下、左上、左下*/
+
+.btn-white{
+  color: #c1f6ff;
+  border: 1px solid #c1f6ff;  /* １本線 */
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 20px;
+  background-color: rgba(0,0,255,0.2);
+
+&:hover{
+  color: #c1f6ff;
+ }
+}
+
+.btn-1{
+  padding-top: 20px;
+}
