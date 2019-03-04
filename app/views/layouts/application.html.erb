@@ -10,6 +10,37 @@
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+     <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
+
+     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <div class="container">
+        <%= link_to root_path do %>
+         <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
+        <% end %>
+
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+            <li>
+              <%= link_to '新規登録','#', class: 'btn btn-white' %>
+            </li>
+
+          <% else %>
+            <li>
+              <%= link_to 'ログイン','#', class: 'navbar-login' %>
+            </li>
+
+        <% end %>
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
+    <script>
+      $(function(){
+        $(".alert").fadeOut(3000);
+      });
+    </script>
   </body>
 </html>

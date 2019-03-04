@@ -1,3 +1,4 @@
+/* TOPページ */
 .top-hero-wrapper{
   width: 100vw;  /* 横幅 */
   height: 100vh; /* 高さ */
@@ -6,7 +7,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
 }
 
 .top-hero-container{
@@ -40,4 +40,59 @@ h1{
 
 .btn-1{
   padding-top: 20px;
+}
+/* ナビゲーション */
+.navbar-transparent{
+  margin-bottom: 5px;
+  background-color: rgba(0,0,0,0.2);
+  a{
+    color: #c1f6ff !important;
+  }
+
+.navbar-brand{
+  padding: 0px;
+  margin-top: 5px;
+}
+
+.navbar-login{
+  font-size: 17px;
+}
+
+ img{
+  height: 45px;
+ }
+}
+/* 新規登録ページ */
+.form-control{
+  height: 45px;
+}
+
+.users-new-wrapper{
+  width: 100vw;  /* 横幅 */
+  height: 100vh; /* 高さ */
+  background: image-url('top-2.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #365e7c;
+
+.users-new-container{
+  padding-top: 170px;
+
+.form-group{
+  margin-bottom: 20px;
+  }
+ }
+}
+
+.login-text{
+  color: #c1f6ff;
+}
+/* アラート */
+.alert{
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
 }
