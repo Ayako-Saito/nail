@@ -23,12 +23,12 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <%= link_to '新規登録','#', class: 'btn btn-white' %>
+              <%= link_to 'ログアウト','#', class: 'btn btn-white' %>
             </li>
 
           <% else %>
             <li>
-              <%= link_to 'ログイン','#', class: 'navbar-login' %>
+              <%= link_to 'ログイン', login_path, class: 'navbar-login' %>
             </li>
 
         <% end %>
