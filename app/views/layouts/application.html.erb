@@ -22,16 +22,17 @@
 
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
-            <li>
-              <%= link_to 'ログアウト','#', class: 'btn btn-white' %>
+            <li class="navbar-log">
+              <%= link_to logout_path, method: :delete do %> 
+              <!-- < %= link_to 'ログアウト', logout_path, method: :delete do %>  エラー -->
+              <% end %>
             </li>
-
           <% else %>
-            <li>
-              <%= link_to 'ログイン', login_path, class: 'navbar-login' %>
+            <li class="navbar-log">
+              <%= link_to 'ログイン', login_path %>
             </li>
+          <% end %>
 
-        <% end %>
         </ul>
       </div>
     </nav>
