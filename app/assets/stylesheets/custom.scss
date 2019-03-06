@@ -1,7 +1,7 @@
-/* TOPページ */
+// TOPページ
 .top-hero-wrapper{
-  width: 100vw;  /* 横幅 */
-  height: 100vh; /* 高さ */
+  width: 100vw;  // 横幅
+  height: 100vh; // 高さ
   background: image-url('top-1.JPG');
   background-position: center;
   background-repeat: no-repeat;
@@ -14,20 +14,28 @@
 }
 
 h1{
-  font-weight: 100;  /* フォントの太さ */
+  font-weight: 100;  // フォントの太さ
   font-size: 80px;
   font-family: cursive;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .text-white{
   color: #bcddff;
-  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000;
-} /*右下、左上、左下*/
+  text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5; // 右下、左上、左下
+}
 
-.btn-white{
+.text-sub{
+  color: #bcddff;
+  text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5;
+  font-size: 40px;
+  font-family: cursive;
+  margin-bottom: 90px;
+}
+
+.btn-bule{
   color: #c1f6ff;
-  border: 1px solid #c1f6ff;  /* １本線 */
+  border: 1px solid #c1f6ff;  // １本線
   padding-top: 8px;
   padding-bottom: 8px;
   font-size: 20px;
@@ -41,7 +49,7 @@ h1{
 .btn-1{
   padding-top: 20px;
 }
-/* ナビゲーション */
+// ナビゲーション
 .navbar-transparent{
   margin-bottom: 5px;
   background-color: rgba(0,0,0,0.2);
@@ -62,14 +70,15 @@ h1{
   height: 45px;
  }
 }
-/* 新規登録ページ */
+// 新規登録ページ
 .form-control{
+  margin-bottom: 30px;
   height: 45px;
 }
 
 .users-new-wrapper{
-  width: 100vw;  /* 横幅 */
-  height: 100vh; /* 高さ */
+  width: 100vw;  // 横幅
+  height: 100vh; // 高さ
   background: image-url('top-2.JPG');
   background-position: center;
   background-repeat: no-repeat;
@@ -88,8 +97,35 @@ h1{
 
 .login-text{
   color: #c1f6ff;
+  margin-bottom: 40px;
 }
-/* アラート */
+// 画像投稿ページ
+.title{
+  color: #c1f6ff;
+  text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5;
+  font-family: cursive;
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.form-group-2{
+  margin-bottom: 20px;
+  }
+
+.image-choice{
+  color: #c1f6ff;
+  font-weight: 100;
+  margin-bottom: 8px;
+}
+
+.form-control-2{
+  width: 360px;
+  height: 100px;
+}
+
+
+// アラート
 .alert{
   margin-bottom: 0px;
   position: fixed;

@@ -5,15 +5,13 @@
       <h3 class="text-center login-text">ログイン</h3>
       <%= form_with scope: :session, url: login_path do |f| %>
         <div class="form-group">
-          <%= f.label :メールアドレス, class: "login-text" %>
-          <%= f.text_field :email, class: "form-control" %>
+          <%= f.text_field :email, class: "form-control", autofocus: true, placeholder: 'メールアドレス' %>
         </div>
         <div class="form-group">
-          <%= f.label :パスワード, class: "login-text" %>
-          <%= f.password_field :password, class: "form-control" %>
+          <%= f.password_field :password, class: "form-control", autofocus: true, placeholder: 'パスワード' %>
         </div>
 
-        <%= f.submit "ログイン", class: "btn-block btn-white" %>
+        <%= f.submit "ログイン", class: "btn-block btn-bule" %>
       <% end %>
    </div>
   </div>

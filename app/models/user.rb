@@ -11,4 +11,6 @@ class User < ApplicationRecord
              length:{ minimum: 8, maximum: 32 }
 
   has_secure_password #パスワードの実装
+
+  has_many :topics
 end

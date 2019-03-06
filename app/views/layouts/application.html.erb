@@ -21,15 +21,19 @@
         <% end %>
 
         <ul class="nav navbar-nav navbar-right">
+
           <% if logged_in? %>
             <li class="navbar-log">
-              <%= link_to logout_path, method: :delete do %> 
-              <!-- < %= link_to 'ログアウト', logout_path, method: :delete do %>  エラー -->
-              <% end %>
+              <%= link_to new_topic_path do %> 投稿 <% end %>
             </li>
-          <% else %>
+
             <li class="navbar-log">
-              <%= link_to 'ログイン', login_path %>
+              <%= link_to logout_path, method: :delete do %> ログアウト <% end %>
+            </li>
+
+          <% else %> <!-- ログインしていない時 -->
+            <li class="navbar-log">
+              <%= link_to login_path do %> ログイン <% end %>
             </li>
           <% end %>
 
