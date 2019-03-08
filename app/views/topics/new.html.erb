@@ -10,7 +10,13 @@
           <%= f.file_field :image, class: 'image-choice' %>
         </div>
 
-        
+        <div class="field">
+          <% %w(人参 玉ねぎ ピーマン にんにく ターメリック じゃがいも).each.with_index do |color,i| %>
+        <label>
+          <%= check_box_tag 'tipic[colors][]', color,false,id:"topic_colors_#{i}"%>
+          <%= color %>
+        </label>
+          <% end %>
 
         <div class="form-group-2">
           <%= f.label :contents, "デザイン等", class: 'image-choice' %>
