@@ -6,7 +6,7 @@
       <%= form_with model: @topic, local: true do |f| %>
 
         <div class="form-group-2">
-          <%= f.label :image, "画像を選ぶ（必須）", class: 'image-choice' %>
+          <%= f.label :image, "画像を選ぶ（必須）",class: 'image-choice' %>
           <%= f.file_field :image, class: 'image-choice' %>
         </div>
 
@@ -16,6 +16,7 @@
           <%= check_box_tag 'tipic[colors][]', color,false,id:"topic_colors_#{i}"%>
           <%= color %>
         </label>
+        
           <% end %>
 
         <div class="form-group-2">
