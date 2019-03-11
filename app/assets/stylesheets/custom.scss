@@ -110,7 +110,7 @@ h1{
 }
 
 .form-group-2{
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   }
 
 .image-choice{
@@ -123,12 +123,22 @@ h1{
   width: 360px;
   height: 100px;
 }
+
+.image-choice-2{
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  margin-right: 20px;
+  margin-bottom: 35px;
+  font-weight: 100;
+}
+
+
 // 画像投稿一覧ページ
 .topic-index-wrapper {
   padding-top: 70px;
   background-color: #000;
   .topic-index-single {
-    background-color: #000;
+    background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 30px;
