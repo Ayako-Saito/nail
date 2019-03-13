@@ -1,4 +1,5 @@
-<div class="users-new-wrapper">
+<!-- 投稿ページ -->
+<div class="topics-new-wrapper">
   <div class="container">
    <div class="row">
     <div class="col-md-offset-4 col-md-4 users-new-container">
@@ -10,13 +11,21 @@
           <%= f.file_field :image, class: 'image-choice' %>
         </div>
 
+        <%= f.label "色を選択（複数可） ＊",class: 'image-choice' %><br />
+          <!-- < % %w(赤 ピンク 黄 オレンジ 青 紫 緑 白 黒 シルバー ゴールド).each.with_index do |box,i| %> -->
+          <!-- <label> -->
+            <!-- < %= check_box_tag 'topic[box][]', box,false,id:"topic_box_#{i}"%> -->
+            <!-- < %= box %> -->
+            <!-- </label> -->
+          <!-- < % end %> -->
+          
 
-        <%= f.label "色を選択（複数可）＊",class: 'image-choice' %>
+        <!-- < %= f.label "色を選択（複数可）＊",class: 'image-choice' %>
         <div class="image-choice-2">
         <input type="checkbox" name="color" value="1"> 赤
         <input type="checkbox" name="color" value="2"> ピンク
         <input type="checkbox" name="color" value="3"> 黄
-        </div>
+        </div> -->
 
         <%= f.label "金額 ＊",class: 'image-choice' %>
         <div class="form-group-2">

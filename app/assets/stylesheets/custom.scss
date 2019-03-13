@@ -84,7 +84,6 @@ h1{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #365e7c;
 
 .users-new-container{
   padding-top: 170px;
@@ -99,13 +98,23 @@ h1{
   color: #c1f6ff;
   margin-bottom: 40px;
 }
-// 画像投稿ページ
+// 画像 投稿ページ
+.topics-new-wrapper{
+  width: 100vw;  // 横幅
+  height: 100vh; // 高さ
+  background: image-url('top-2.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .title{
   color: #c1f6ff;
   text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5;
   font-family: cursive;
   font-size: 60px;
-  margin-top: 0px;
+  margin-top: 80px;
   margin-bottom: 40px;
 }
 
@@ -132,31 +141,38 @@ h1{
   font-weight: 100;
 }
 
-
-// 画像投稿一覧ページ
+// 画像 投稿一覧ページ
 .topic-index-wrapper {
   padding-top: 70px;
   background-color: #000;
   .topic-index-single {
     background-color: #fff;
-    padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #c1f6ff;
-    border-radius: 3px;
-    .topic-author {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
     img {
-          margin-top: 10px;
           margin-bottom: 20px;
           width: 100%;
         }
       }
     }
-
-
+// 画像 詳細ページ
+.topic-show-wrapper{
+  width: 100vw;  // 横幅
+  height: 100vh; // 高さ
+  padding-top: 70px;
+  background-color: #000;
+  .topic-show-single {
+    background-color: #fff;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #c1f6ff;
+    img {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+}
 // アラート
 .alert{
   margin-bottom: 0px;
