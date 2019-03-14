@@ -11,14 +11,14 @@
           <%= f.file_field :image, class: 'image-choice' %>
         </div>
 
-        <%= f.label "色を選択（複数可） ＊",class: 'image-choice' %><br />
-          <!-- < % %w(赤 ピンク 黄 オレンジ 青 紫 緑 白 黒 シルバー ゴールド).each.with_index do |box,i| %> -->
-          <!-- <label> -->
-            <!-- < %= check_box_tag 'topic[box][]', box,false,id:"topic_box_#{i}"%> -->
-            <!-- < %= box %> -->
-            <!-- </label> -->
-          <!-- < % end %> -->
-          
+        <%= f.label "色を選択（複数可）＊",class: 'image-choice' %><br />
+          <% %w(赤 ピンク 黄 オレンジ 青 紫 緑 白 黒 グレー シルバー ゴールド).each.with_index do |box,i| %>
+          <label class="image-choice">
+            <%= check_box_tag 'topic[box][]', box,false,id:"topic_box_#{i}"%>
+            <%= box %>
+          </label>
+          <% end %><br />
+
 
         <!-- < %= f.label "色を選択（複数可）＊",class: 'image-choice' %>
         <div class="image-choice-2">
@@ -27,7 +27,7 @@
         <input type="checkbox" name="color" value="3"> 黄
         </div> -->
 
-        <%= f.label "金額 ＊",class: 'image-choice' %>
+        <%= f.label "金額 ＊",class: 'image-choice-money' %>
         <div class="form-group-2">
           <select id="colors">
             <option value="" selected="selected">選択してください</option>
@@ -60,7 +60,7 @@
           <%= f.text_area :contents, class: "form-control-2", placeholder: 'お店のサンプル、持ち込みデザイン等、ご自由にお書きください' %>
         </div>
 
-       <p style="color:#c1f6ff">＊は必須項目</p>
+       <label class="image-choice-2">＊は必須項目</label>
         <%= f.submit "投 稿", class: "btn-block btn-bule" %>
       <% end %>
    </div>
