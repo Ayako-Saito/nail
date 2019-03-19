@@ -19,41 +19,10 @@
           </label>
           <% end %><br />
 
-
-        <!-- < %= f.label "色を選択（複数可）＊",class: 'image-choice' %>
-        <div class="image-choice-2">
-        <input type="checkbox" name="color" value="1"> 赤
-        <input type="checkbox" name="color" value="2"> ピンク
-        <input type="checkbox" name="color" value="3"> 黄
-        </div> -->
-
         <%= f.label "金額 ＊",class: 'image-choice-money' %>
         <div class="form-group-2">
-          <select id="colors">
-            <option value="" selected="selected">選択してください</option>
-            <option value="1">5,000円以下</option>
-            <option value="2">5,000円~10,000円</option>
-            <option value="3">10,000円~15,000円</option>
-          </select>
-
+          <%= f.select :money, @money_list %>
         </div>
-
-        <!-- <script>
-        $(':checkbox:checked').each(function() {
-          //値を取得
-          var val = $(this).val();
-          console.log(val);
-        });
-        </script> -->
-
-        <!-- <script>
-        $('option:selected').each(function() {
-          //値を取得
-          var val = $(this).val();
-          console.log(val);
-        });
-        </script> -->
-
 
         <div class="form-group-2">
           <%= f.label :contents, "デザイン等", class: 'image-choice' %>
