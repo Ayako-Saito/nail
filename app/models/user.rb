@@ -12,5 +12,5 @@ class User < ApplicationRecord
 
   has_secure_password #パスワードの実装
 
-  has_many :topics
+  has_many :topics, dependent: :destroy
 end
