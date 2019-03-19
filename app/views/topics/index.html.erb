@@ -1,9 +1,11 @@
 <!-- 投稿一覧ページ -->
 <div class="topic-index-wrapper">
-  <div class="container">
-    <% @topics.each do |topic| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+  <div class="container-fluid">
+    <% @topics.each_with_index do |topic, i| %>
+        <% if i % 4 == 0 then %>
+          <div class="row">
+        <% end %>
+        <div class="col-md-3">
           <div class="topic-index-single">
 
             <%= link_to topic_path(topic.id) do %>
@@ -12,7 +14,9 @@
 
           </div>
         </div>
-      </div>
+        <% if i % 4 == 3 %>
+          </div>
+        <% end %>
     <% end %>
   </div>
 </div>
