@@ -10,20 +10,20 @@
             <p class="show-name"> お名前：
               <%= @topic.user.name %>
             </p>
+
             <p class="show-box"> 色：
               <% @colorbox.each do |color| %>
               <%= color %>
               <% end %>
             </p>
-            <p class="show-contents"> コメント：
-            <%= @topic.contents %>
-            </p>
 
-            <p>
+            <p class="show-money"> 金額：
               <%= @money_text %>
             </p>
 
-
+            <p class="show-contents"> コメント：
+            <%= @topic.contents %>
+            </p>
 
             <%= link_to topics_path(topic_id: @topic.id), method: :delete, data: {confirm: "本当に削除しますか？"} do %>
             <p class="show-delete"> 削除 </p>

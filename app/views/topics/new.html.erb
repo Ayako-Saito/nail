@@ -1,10 +1,10 @@
 <!-- 投稿ページ -->
 <div class="topics-new-wrapper">
   <div class="container">
-   <div class="row">
-    <div class="col-md-offset-4 col-md-4 users-new-container">
-      <h3 class="text-center title">Your Nail</h3>
-      <%= form_with model: @topic, local: true do |f| %>
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h3 class="text-center title">Your Nail</h3>
+        <%= form_with model: @topic, local: true do |f| %>
 
         <div class="form-group-2">
           <%= f.label :image, "画像を選ぶ ＊",class: 'image-choice' %>
@@ -12,12 +12,14 @@
         </div>
 
         <%= f.label "色を選択（複数可）＊",class: 'image-choice' %><br />
-          <% %w(赤 ピンク 黄 オレンジ 青 紫 緑 白 黒 グレー シルバー ゴールド).each.with_index do |box,i| %>
-          <label class="image-choice">
-            <%= check_box_tag 'topic[box][]', box,false,id:"topic_box_#{i}"%>
-            <%= box %>
-          </label>
-          <% end %><br />
+        <% %w(赤 ピンク 黄 オレンジ 青 紫 緑 白 黒 グレー シルバー ゴールド).each do |box,i| %> 
+        <!-- %wで文字列の配列を作成 -->
+
+        <label class="image-choice">
+          <%= check_box_tag 'topic[box][]', box,false,id:"topic_box_#{i}"%>
+          <%= box %>
+        </label>
+        <% end %><br />
 
         <%= f.label "金額 ＊",class: 'image-choice-money' %>
         <div class="form-group-2">
@@ -29,10 +31,10 @@
           <%= f.text_area :contents, class: "form-control-2", placeholder: 'お店のサンプル、持ち込みデザイン等、ご自由にお書きください' %>
         </div>
 
-       <label class="image-choice-2">＊は必須項目</label>
+        <label class="image-choice-2">＊は必須項目</label>
         <%= f.submit "投 稿", class: "btn-block btn-bule" %>
-      <% end %>
-   </div>
+        <% end %>
+      </div>
+    </div>
   </div>
- </div>
 </div>

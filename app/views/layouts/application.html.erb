@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Nail</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Nail</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <% flash.each do |key, value| %>
-     <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-    <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
-      <div class="container">
-        <%= link_to root_path do %>
-         <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
+<body>
+  <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+  <% end %>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+    <div class="container">
+      <%= link_to root_path do %>
+      <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
+      <% end %>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="navbar-log">
+          <%= link_to new_topic_path do %> 投稿 <% end %>
+        </li>
+
+        <li class="navbar-log">
+          <%= link_to topics_path do %> 投稿一覧 <% end %>
+        </li>
+
+        <li class="navbar-log">
+          <%= link_to logout_path, method: :delete do %> ログアウト <% end %>
+        </li>
+
+        <% else %>
+        <!-- ログインしていない時 -->
+        <li class="navbar-log">
+          <%= link_to login_path do %> ログイン <% end %>
+        </li>
         <% end %>
 
-        <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </nav>
 
-          <% if logged_in? %>
-            <li class="navbar-log">
-              <%= link_to "#" do %> 検索 <% end %> <!-- リンクかく -->
-            </li>
+  <%= yield %>
+  <script>
+    $(function () {
+      $(".alert").fadeOut(3000);
+    });
+  </script>
+</body>
 
-            <li class="navbar-log">
-              <%= link_to new_topic_path do %> 投稿 <% end %>
-            </li>
-
-            <li class="navbar-log">
-              <%= link_to topics_path do %> 投稿一覧 <% end %>
-            </li>
-
-            <li class="navbar-log">
-              <%= link_to logout_path, method: :delete do %> ログアウト <% end %>
-            </li>
-
-          <% else %> <!-- ログインしていない時 -->
-            <li class="navbar-log">
-              <%= link_to login_path do %> ログイン <% end %>
-            </li>
-          <% end %>
-
-        </ul>
-      </div>
-    </nav>
-
-    <%= yield %>
-    <script>
-      $(function(){
-        $(".alert").fadeOut(3000);
-      });
-    </script>
-  </body>
 </html>

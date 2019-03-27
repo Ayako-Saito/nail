@@ -152,6 +152,7 @@ h1{
   background: -moz-radial-gradient(#e2faff, #c1f6ff 30%, #1723a5 60%, #000);
   background: -webkit-radial-gradient(#e2faff, #c1f6ff 30%, #1723a5 60%, #000);
   background: radial-gradient(#e2faff, #c1f6ff 30%, #1723a5 60%, #000);
+  background-size: cover;
   .topic-index-single {
     margin-top: 30px;
     border: 1.5px solid #c1f6ff;
@@ -186,6 +187,10 @@ h1{
 }
 .show-box{
   margin-left: 58px;
+  font-size: 14px;
+}
+.show-money{
+  margin-left: 44px;
   font-size: 14px;
 }
 .show-contents{
