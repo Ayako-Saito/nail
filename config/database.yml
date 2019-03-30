@@ -52,4 +52,4 @@ production:
 adapter: postgresql
 encoding: unicode
 pool: 5
-database:nail_production
+database: nail_production
