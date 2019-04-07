@@ -24,11 +24,12 @@ class TopicsController < ApplicationController
 
   def create
     @topic = current_user.topics.new(topic_params)
-    p topic_params
+    # p topic_params
+    topic_params
     if @topic.save
       redirect_to topics_path, success: '投稿しました'
     else
-      flash.now[:danger] = "投稿できませんでした"
+      flash.now[:info] = "投稿できませんでした"
       render :new
     end
   end
@@ -36,7 +37,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic = Topic.find(params[:topic_id])
     @topic.destroy
-    redirect_to topics_path, notice: "投稿を削除しました"
+    redirect_to topics_path, info: "投稿を削除しました"
   end
 
   private

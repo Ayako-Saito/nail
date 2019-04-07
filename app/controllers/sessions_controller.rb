@@ -3,15 +3,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-      user = User.find_by(email: session_params[:email])
-      if user && user.authenticate(session_params[:password])
-        log_in user
-        redirect_to root_path, success: 'ログインしました'
-      else
-        flash.now[:danger] = 'ログインできませんでした'
-        render :new
-      end
+    user = User.find_by(email: session_params[:email]) # フォームから送信されたメールアドレスを取得し、一致するユーザーがいるか検索
+    if user && user.authenticate(session_params[:password]) # userのパスワードが正しいかどうか確かめている
+      log_in user
+      redirect_to root_path, success: 'ログインしました'
+    else
+      flash.now[:danger] = 'ログインできませんでした'
+      render :new
     end
+  end
 
       def destroy
         log_out
