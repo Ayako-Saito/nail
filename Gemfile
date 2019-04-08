@@ -75,3 +75,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Heroku上で画像のアップロードをする為、追加
+gem "aws-sdk-s3", require: false
