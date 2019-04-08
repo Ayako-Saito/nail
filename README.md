@@ -1,24 +1,23 @@
-# README
+### ポートフォリオ
+---
+#### アプリケーションの概要
+- ネイルデザイン（写真）投稿サイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### アプリケーションの機能一覧
+- データベース 
+   - MySQL
 
-Things you may want to cover:
+- 新規登録
+- ログイン
+- 画像投稿
+  - gem : carrierwave
+- チェックボックス
+- セレクトボックス
+- コメント欄
+- 投稿画像一覧表示
+- 画像詳細ページ
+- 投稿記事削除
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Herokuにてデプロイ 
+https://aqueous-earth-98176.herokuapp.com/
+  一定時間経つと投稿画像がみられなくなるので、対応中
