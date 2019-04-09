@@ -41,6 +41,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem "jquery-rails"
 gem 'bcrypt'
 
+# Heroku上で画像のアップロードをする為、追加
+gem "aws-sdk-s3", require: false
+gem 'fog-aws'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -76,5 +80,3 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Heroku上で画像のアップロードをする為、追加
-gem "aws-sdk-s3", require: false
