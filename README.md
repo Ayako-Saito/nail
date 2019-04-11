@@ -20,4 +20,3 @@
 
 #### Herokuにてデプロイ 
 https://aqueous-earth-98176.herokuapp.com/
-  一定時間経つと投稿画像がみられなくなるので、対応中
