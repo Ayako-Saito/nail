@@ -197,11 +197,19 @@ h1{
   margin-left: 16px;
   font-size: 14px;
 }
-.show-delete{
+.show-return{
+  margin-left: 450px;
   margin-right: 20px;
   margin-top: 20px;
   text-align: right;
+  display: inline-block; 
 }
+.show-delete{
+  margin-top: 20px;
+  text-align: right;
+  display: inline-block;
+}
+
 // アラート
 .alert{
   margin-bottom: 0px;
@@ -209,6 +217,7 @@ h1{
   width: 100%;
   z-index: 10000;
 }
+
 // ログイン用コメント
 .comment1{
   color: #fff;

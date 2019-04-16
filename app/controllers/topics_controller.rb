@@ -21,7 +21,6 @@ class TopicsController < ApplicationController
               # .flatten ネストされた配列を1次元配列にフラット化 (1)階層を指定 [0]で[""]と値をとる
   end
 
-
   def create
     @topic = current_user.topics.new(topic_params)
     # p topic_params
