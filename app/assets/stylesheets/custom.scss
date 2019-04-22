@@ -1,6 +1,6 @@
 // TOPページ
-.top-hero-wrapper{
-  width: 100vw;  // 横幅
+.top-hero-wrapper {
+  width: 100vw; // 横幅
   height: 100vh; // 高さ
   background: image-url('top-1.JPG');
   background-position: center;
@@ -9,23 +9,23 @@
   background-size: cover;
 }
 
-.top-hero-container{
+.top-hero-container {
   padding-top: 200px;
 }
 
-h1{
-  font-weight: 100;  // フォントの太さ
+h1 {
+  font-weight: 100; // フォントの太さ
   font-size: 80px;
   font-family: cursive;
   margin-bottom: 30px;
 }
 
-.text-white{
+.text-white {
   color: #bcddff;
   text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5; // 右下、左上、左下
 }
 
-.text-sub{
+.text-sub {
   color: #bcddff;
   text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5;
   font-size: 40px;
@@ -33,51 +33,54 @@ h1{
   margin-bottom: 90px;
 }
 
-.btn-bule{
+.btn-bule {
   color: #c1f6ff;
-  border: 1px solid #c1f6ff;  // １本線
+  border: 1px solid #c1f6ff; // １本線
   padding-top: 8px;
   padding-bottom: 8px;
   font-size: 20px;
-  background-color: rgba(0,0,255,0.2);
+  background-color: rgba(0, 0, 255, 0.2);
 
-&:hover{
-  color: #c1f6ff;
- }
+  &:hover {
+    color: #1723a5;
+  }
 }
 
-.btn-1{
+.btn-1 {
   padding-top: 20px;
 }
+
 // ナビゲーション
-.navbar-transparent{
+.navbar-transparent {
   margin-bottom: 5px;
-  background-color: rgba(0,0,0,0.2);
-  a{
+  background-color: rgba(0, 0, 0, 0.2);
+
+  a {
     color: #c1f6ff !important;
   }
 
-.navbar-brand{
-  padding: 0px;
-  margin-top: 5px;
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 5px;
+  }
+
+  .navbar-log {
+    font-size: 17px;
+  }
+
+  img {
+    height: 45px;
+  }
 }
 
-.navbar-log{
-  font-size: 17px;
-}
-
- img{
-  height: 45px;
- }
-}
 // 新規登録ページ
-.form-control{
+.form-control {
   margin-bottom: 10px;
   height: 45px;
 }
 
-.users-new-wrapper{
-  width: 100vw;  // 横幅
+.users-new-wrapper {
+  width: 100vw; // 横幅
   height: 100vh; // 高さ
   background: image-url('top-2.JPG');
   background-position: center;
@@ -85,23 +88,24 @@ h1{
   background-attachment: fixed;
   background-size: cover;
 
-.users-new-container{
-  padding-top: 170px;
+  .users-new-container {
+    padding-top: 170px;
 
-.form-group{
-  margin-bottom: 20px;
+    .form-group {
+      margin-bottom: 20px;
+    }
   }
- }
 }
 
-.login-text{
+.login-text {
   color: #c1f6ff;
   margin-bottom: 40px;
 }
+
 // 画像 投稿ページ
-.topics-new-wrapper{
-  width: 100vw;  // 横幅
-  min-height:100vh; // 高さ
+.topics-new-wrapper {
+  width: 100vw; // 横幅
+  min-height: 100vh; // 高さ
   background: image-url('top-2.JPG');
   background-position: center;
   background-repeat: no-repeat;
@@ -109,7 +113,7 @@ h1{
   background-size: cover;
 }
 
-.title{
+.title {
   color: #c1f6ff;
   text-shadow: 1px 1px 0 #1723a5, -1px 1px 0 #1723a5, 1px -1px 0 #1723a5;
   font-family: cursive;
@@ -118,28 +122,28 @@ h1{
   margin-bottom: 40px;
 }
 
-.form-group-2{
+.form-group-2 {
   margin-bottom: 35px;
-  }
+}
 
-.image-choice{
+.image-choice {
   color: #c1f6ff;
   font-weight: 100;
   margin-bottom: 8px;
 }
 
-.form-control-2{
+.form-control-2 {
   width: 360px;
   height: 100px;
 }
 
-.image-choice-2{
+.image-choice-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
   font-weight: 100;
 }
 
-.image-choice-money{
+.image-choice-money {
   margin-top: 35px;
   color: #c1f6ff;
   font-weight: 100;
@@ -153,65 +157,75 @@ h1{
   background: -webkit-radial-gradient(#e2faff, #c1f6ff 30%, #1723a5 60%, #000);
   background: radial-gradient(#e2faff, #c1f6ff 30%, #1723a5 60%, #000);
   background-size: cover;
+
   .topic-index-single {
     margin-top: 30px;
     border: 1.5px solid #c1f6ff;
+
     img {
-          width: 100%;
-        }
-      }
+      width: 100%;
     }
+  }
+}
 
 // 画像 詳細ページ
-.topic-show-wrapper{
-  width: 100%;  // 横幅
-  min-height:100vh; // 高さ
+.topic-show-wrapper {
+  width: 100%; // 横幅
+  min-height: 100vh; // 高さ
   padding-top: 70px;
   background: -moz-linear-gradient(top, #000, #1723a5, #e2faff);
   background: -webkit-linear-gradient(top, #000, #1723a5, #e2faff);
   background: linear-gradient(to bottom, #000, #1723a5, #e2faff);
+
   .topic-show-single {
     background-color: #fff;
     padding-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #c1f6ff;
+
     img {
       width: 100%;
       margin-bottom: 20px;
     }
   }
 }
-.show-name{
+
+.show-name {
   margin-left: 30px;
   font-size: 14px;
 }
-.show-box{
+
+.show-box {
   margin-left: 58px;
   font-size: 14px;
 }
-.show-money{
+
+.show-money {
   margin-left: 44px;
   font-size: 14px;
 }
-.show-contents{
+
+.show-contents {
   margin-left: 16px;
   font-size: 14px;
 }
-.show-return{
+
+.show-return {
   margin-left: 450px;
   margin-right: 20px;
   margin-top: 20px;
   text-align: right;
-  display: inline-block; 
+  display: inline-block;
 }
-.show-delete{
+
+.show-delete {
   margin-top: 20px;
   text-align: right;
   display: inline-block;
 }
 
 // アラート
-.alert{
+.alert {
   margin-bottom: 0px;
   position: fixed;
   width: 100%;
@@ -219,13 +233,13 @@ h1{
 }
 
 // ログイン用コメント
-.comment1{
+.comment1 {
   color: #fff;
   text-shadow: 0.5px 0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px -0.5px 0 #000;
   font-size: 16px;
 }
 
-.comment2{
+.comment2 {
   color: #fff;
   text-shadow: 0.7px 0.7px 0 #000, -0.7px 0.7px 0 #000, 0.7px -0.7px 0 #000, -0.7px -0.7px 0 #000;
   font-size: 13.5px;
