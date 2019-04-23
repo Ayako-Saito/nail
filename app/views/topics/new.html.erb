@@ -19,7 +19,7 @@
           <%= check_box_tag 'topic[box][]', box,false,id:"topic_box_#{i}"%>
           <%= box %>
         </label>
-        <% end %><br />
+        <% end %><br/>
 
         <%= f.label "金額 ＊",class: 'image-choice-money' %>
         <div class="form-group-2">
@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group-2">
-          <%= f.label :contents, "デザイン等", class: 'image-choice' %>
+          <%= f.label :contents, "デザイン等", class: 'image-choice' %><br/>
           <%= f.text_area :contents, class: "form-control-2", placeholder: 'お店のサンプル、持ち込みデザイン等、ご自由にお書きください' %>
         </div>
 
