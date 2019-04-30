@@ -4,7 +4,7 @@
       <div class="col-md-offset-4 col-md-4 users-new-container">
         <h3 class="text-center login-text">ログイン</h3>
 
-        <%= form_with scope: :session, url: login_path do |f| %>
+        <%= form_with scope: :session, url: login_path do |f| %> <!-- DBに保存しないのでModel不要、指定したURLへリクエストをだす -->
 
         <div class="form-group">
           <%= f.text_field :email, class: "form-control", autofocus: true, placeholder: 'メールアドレス' %>
