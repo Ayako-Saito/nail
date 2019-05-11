@@ -1,6 +1,5 @@
 class TopicsController < ApplicationController
-  @@money_list = [["5,000円以下", "1"],["5,000円~10,000円", "2"],["10,000円~15,000円", "3"],["15,000円~20,000円", "4"],["20,000円以上","5"]]
-              # [["表示する文字","データベースに登録する値"]]
+  include Constants
 
   def index
     @topics = Topic.all
@@ -8,7 +7,7 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
-    @money_list = @@money_list
+    @money_list = MONEY_LIST
   end
 
   def show
@@ -16,7 +15,7 @@ class TopicsController < ApplicationController
     @colorbox = @topic.box.tr("[]\"","").split("")  
     # .tr("[] \","ここは何も入れない")...[]で[]を、\"で ""をとる  
     # .split("")...分割した配列を返す。""で、文字の間に「,」がつく
-    @money_text = @@money_list.select { |mo| mo[1] == @topic.money }.flatten(1)[0]
+    @money_text = MONEY_LIST.select { |mo| mo[1] == @topic.money }.flatten(1)[0]
               # 配列オブジェクト.select { |変数| ブロック処理 } 
               # .flatten ネストされた配列を1次元配列にフラット化 (1)階層を指定 [0]で[""]と値をとる
   end
@@ -28,8 +27,8 @@ class TopicsController < ApplicationController
     if @topic.save
       redirect_to topics_path, success: '投稿しました'
     else
-      flash.now[:info] = "投稿できませんでした"
-      render :new
+      flash[:info] = "投稿できませんでした"
+      redirect_to controller: 'topics', action: 'new'
     end
   end
 
