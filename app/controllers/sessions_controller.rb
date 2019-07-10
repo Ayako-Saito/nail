@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     else
       flash.now[:danger] = 'ログインできませんでした'
       render :new
-    end
+     end
   end
 
       def destroy
