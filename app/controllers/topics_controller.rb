@@ -12,8 +12,8 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    # @unbox = @topic.box.tr("[]\" ","").split(",")
-    @unbox = eval(@topic.box)
+    # @colorbox = @topic.box.tr("[]\" ","").split(",")
+    @colorbox = eval(@topic.box)
     @money_text = @@money_list.select { |op| op[1] == @topic.money }.flatten(1)[0]
   end
 
